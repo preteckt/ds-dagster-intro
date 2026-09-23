@@ -29,7 +29,7 @@ class TelematicsConfig(dg.Config):
     """Run configuration, editable from the Launchpad in the Dagster UI."""
 
     # Relative paths are resolved against the project root.
-    csv_path: str = "data/example_telematics_data_2.csv"
+    csv_path: str = "data/example_telematics_data.csv"
 
 
 @dg.asset(group_name="telematics")
