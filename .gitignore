@@ -204,3 +204,7 @@ __marimo__/
 
 # Dagster
 .tmp_dagster*/
+
+# Reserve for Interview
+example_telematics_data_2.csv
+interviewer_notes.md
