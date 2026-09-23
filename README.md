@@ -58,14 +58,7 @@ Open http://localhost:3000 in your browser.
 - **Materialize the assets:** go to **Assets** and open the `telematics` group (or click **View lineage**) to see the DAG. Click **Materialize all** to run both assets.
 - **Monitor runs:** open the **Runs** tab to see each run's status, step timings and logs.
 - **Inspect results:** click an asset to see the metadata it produced, such as NaN counts, a data preview, the `describe()` table and the correlation matrix.
-- **Change the input file:** use the dropdown next to **Materialize** and choose **Open launchpad**. Then edit the run config:
 
-  ```yaml
-  ops:
-    preprocessed_telematics:
-      config:
-        csv_path: data/example_telematics_data.csv
-  ```
 
 - **Schedules:** `daily_telematics_schedule` runs `telematics_job` every day at 06:00 UTC. It starts turned off. Enable it from the **Automation** tab. See [schedules.py](src/ds_dagster_intro/defs/schedules.py) for a cron syntax reference.
 
@@ -77,12 +70,15 @@ dg launch --assets '*'
 ```
 
 ### Running the tests
+Use the test explorer in vs code, or run:
 
 ```bash
 python -m unittest discover tests
 ```
 
 ### Notebooks
+
+To view and interact with the notebooks, install the jupyter extension in vs code and open the notebook, or run:
 
 ```bash
 jupyter lab notebooks/
